@@ -4,7 +4,7 @@ Api Proxy1337
 
 Cоздание нового ключа.
 
-> POST apis/createKey/
+> POST dev/createKey/
 
 ~~~json
   {
@@ -17,7 +17,7 @@ Cоздание нового ключа.
 
 Получение базы доступных серверных и мобильных прокси
 
-> GET apis/getBasePrivate/
+> GET dev/getBasePrivate/
 ~~~json
   {
 		"id": "7",
