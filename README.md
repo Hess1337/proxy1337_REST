@@ -7,6 +7,7 @@ Cоздание нового ключа.
 > POST dev/createKey/
 
 ~~~json
+//requeste
   {
     "email" : "admin@proxy1337.com",
   }
