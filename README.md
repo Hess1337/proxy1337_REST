@@ -86,3 +86,18 @@ period               | Период покупки прокси, должен с
 ---------------------|-------------------
 success              | Статус запроса
 order          	     | Номер заказа
+## Коды ответов {#errors}
+~~~json
+  {
+     "code": 404,
+     "description": "Method not found",
+  }
+~~~
+Поле                 | Описание
+---------------------|-------------------
+1              	     | Key not found (Ключ автризации не найден)
+2		     | Not enough funds (Недостаточно средств)
+3		     | Internal server error (Внутренняя ошибка сервера)
+200		     | The operation was completed successfully (Операция успешна)
+404		     | Method not found (Метод не найден)
+500		     | Error in parameters (Ошибка параметров)
