@@ -63,6 +63,7 @@ lon                  | Координаты прокси (Долгота)
 ~~~
 
 ## buyProxy {#buyProxy}
+> POST dev/buyProxy/
 Покупка прокси
 ~~~json
   {
