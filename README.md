@@ -86,6 +86,87 @@ period               | Период покупки прокси, должен с
 ---------------------|-------------------
 success              | Статус запроса
 order          	     | Номер заказа
+
+## getOrder {#getOrder}
+> POST dev/getOrder/
+Получение заказа
+~~~json
+  {
+     "order_id": "1337",
+  }
+~~~
+Поле                 | Описание
+---------------------|-------------------
+order_id             | Номер заказа из {#buyProxy}
+
+~~~json
+  {
+	{
+	"orderId": 1337,
+	"name": "\u0421\u0435\u0440\u0432\u0435\u0440\u043d\u044b\u0435 \/ Facebook \/ \u0421\u0428\u0410 \/ #6",
+	"ip": "127.0.0.1",
+	"port": 8000,
+	"login": "66631b41",
+	"password": "66631b41",
+	"time": 1690745641,
+	"expire": 1693337622,
+	"port_http": "8000",
+        "port_socks": "30011",
+        "active_port": "http",
+        "product_id": "594",
+        "product_type": "proxy",
+        "product_country": "us",
+        "change_ip_link": "https://proxy1337.com/change_mobile/do/yiwdkI2TQ22",
+        "rotate_can_change": "1",
+        "rotate_min": "0",
+        "rotate_max": "60",
+        "rotate_active": "3"
+	}
+	{
+	"orderId": 1338,
+	"name": "\u0421\u0435\u0440\u0432\u0435\u0440\u043d\u044b\u0435 \/ Facebook \/ \u0421\u0428\u0410 \/ #6",
+	"ip": "127.0.0.1",
+	"port": 8000,
+	"login": "66631b41",
+	"password": "66631b41",
+	"time": 1690745641,
+	"expire": 1693337622,
+	"port_http": "8000",
+        "port_socks": "30011",
+        "active_port": "http",
+        "product_id": "594",
+        "product_type": "proxy",
+        "product_country": "us",
+        "change_ip_link": "https://proxy1337.com/change_mobile/do/yiwdkI2TQ22",
+        "rotate_can_change": "1",
+        "rotate_min": "0",
+        "rotate_max": "60",
+        "rotate_active": "3"
+	}
+
+  }
+~~~
+Поле                 | Описание
+---------------------|-------------------
+orderId              | Номер заказа из {#buyProxy}
+name          	     | Имя прокси
+ip          	     | Айпи прокси
+login         	     | Логин авторизации
+password      	     | Пароль авторизации
+time          	     | Время покупки (timestamp)
+expire               | Дата окончания прокси (timestamp)
+port_http            | http порт прокси
+port_socks           | socks порт прокси
+active_port          | Активный порт на данный момент
+product_id           | Айди прокси из {#GetBasePrivate}
+product_type         | Тип прокси (proxy - Серверный, mobile - Мобильный)
+product_country      | Код страны в Alpha-2 ISO 3166-1
+change_ip_link       | Ссылка для смены айпи адреса (Если прокси мобильный)
+rotate_can_change    | Возможна ли смена айпи
+rotate_min           | Минимально допустимое время смены айпи (В минутах)
+rotate_max           | Максимально допустимое время смены айпи (В минутах)
+rotate_active        | Время ротации прокси на данный момент
+
 ## Коды ответов {#errors}
 ~~~json
   {
